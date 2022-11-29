@@ -1,0 +1,13 @@
+@use "../index" as *;
+
+.table-responsive {
+    overflow-y: auto;
+    max-height: 28rem;
+}
+
+.table {
+    th {
+        background-color: $highlight;
+        color: $white;
+    }
+}

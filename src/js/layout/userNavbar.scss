@@ -1,0 +1,15 @@
+@use "../index" as *;
+
+.navbar {
+    background-color: $primary;
+}
+
+.brand {
+    font-weight: bold;
+    font-style: italic;
+    color: $highlight;
+
+    &:hover {
+        color: $white;
+    }
+}

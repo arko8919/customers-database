@@ -1,0 +1,11 @@
+@use './index' as *;
+
+.btn-primary, .btn-secondary {
+    background-color: $secondary;
+    color: $primary;
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}

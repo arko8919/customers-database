@@ -1,0 +1,65 @@
+@use './js/index' as *;
+@use './js/custom' as *;
+
+// "General" Styles
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    position: relative;
+    height: 100%;
+
+    // Responsive font size
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+}
+body > #root > div {
+    height: 100vh;
+  }
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem;
+    @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+
+h2 {
+    font-size: $mod_1*$mod_1*$mod_1 *1rem;
+    @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+
+h3 {
+    font-size: $mod_1*$mod_1 *1rem;
+    @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header {
+    min-height: 20vh;
+}
+
+main {
+    min-height: 70vh;
+}
+
+footer {
+    min-height: 10vh;
+}
+
+// Use it on main element when there is no header element
+.auth {
+    min-height: 90vh;
+}
+
+.auth-card {
+    max-width: 400px;
+}
